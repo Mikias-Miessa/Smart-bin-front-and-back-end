@@ -1,0 +1,268 @@
+/* Custom styles for Smart Waste Bins page */
+
+body {
+    background-color: #181d33;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+hr {
+    background-color: #007bff;
+    height: 3px;
+    border: none;
+    opacity: 0.75;
+}
+
+#predictionContainer {
+    margin-top: 50px;
+    height: 300px;
+    width: 100%;
+    overflow-y: auto;
+    display: inline-block;
+    position: relative;
+}
+
+#predictionContainer .header-table {
+    width: 100%;
+    table-layout: fixed;
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+    z-index: 1;
+}
+
+#predictionContainer .header-table th {
+    font-weight: bold;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#predictionContainer .body-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#predictionContainer .body-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#predictionContainer .body-table tbody {
+    display: block;
+    overflow-y: auto;
+    height: calc(100% - 30px);
+}
+
+/* Rest of your CSS styles */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+th,
+td {
+    border: 1px solid #fff;
+}
+
+table caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+table caption span {
+    color: #999;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.card-item {
+    width: 300px;
+    background-color: #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    /* Add border */
+    padding: 6px;
+    margin-bottom: 16px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-item {
+    width: 100%;
+    margin-top: 16px;
+}
+
+
+#binsContainer {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    /* padding-left: 50px; */
+    /* padding-top: 40px; */
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #181d33;
+    border-radius: 8px;
+
+    position: relative;
+}
+
+/* #tableContainer {
+    margin-top: 200px;
+} */
+
+.bins-title {
+    margin-top: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #181d33;
+    /* border-radius: 8px 8px 0 0; */
+    font-size: 28px;
+    position: sticky;
+    top: 0;
+    /* Position the title at the top of the container */
+    z-index: 1;
+    /* Ensure the title is above the scrollable content */
+}
+
+.button-item {
+    margin: 10px;
+}
+
+#2 {
+    position: relative;
+}
+
+
+#resultContainer {
+    margin-top: 20px;
+}
+
+#tableContainer {
+    position: absolute;
+    top: 45%;
+    right: 50%;
+    left: 0;
+}
+
+#preview-textfield {
+    font-size: 24px;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+#demo {
+    width: 550px;
+    height: 300px;
+}
+
+.tocenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-table {
+    width: 100%;
+    /* Set the width of the table */
+    border-collapse: collapse;
+    /* Collapse the borders between cells */
+}
+
+.card-table button {
+    display: block;
+    /* Display buttons as block elements */
+    width: 100%;
+    /* Set the width of buttons to fill the cell */
+    padding: 10px;
+    /* Add padding around the buttons */
+    background-color: #f2f2f2;
+    /* Set the background color */
+    border: none;
+    /* Remove borders */
+    text-align: left;
+    /* Align button text to the left */
+    font-family: Arial, sans-serif;
+    /* Set the font family */
+    cursor: pointer;
+    /* Add cursor pointer on hover */
+}
+
+.card-table button:hover {
+    background-color: #e0e0e0;
+    /* Change the background color on hover */
+}
+
+
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    #demo {
+        width: 100%;
+        height: auto;
+    }
+
+    #binsContainer {
+        align-items: flex-start;
+    }
+
+    .button-item {
+        margin: 10px 0;
+    }
+
+    #map {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+    }
+}

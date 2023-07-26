@@ -43,19 +43,23 @@ if (isset($_POST['binId'])) {
     $binId = $_POST['binId'];
 
     // Retrieve the bin data from the database
-    $sql = "SELECT level, location FROM bins WHERE bin_id = '$binId'";
+    $sql = "SELECT * FROM bins WHERE bin_id = '$binId'";
     $result = $con->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $level = $row['level'];
         $location = $row['location'];
+        $lat = $row['lat'];
+        $lon = $row['lon'];
 
         // Prepare the response data
         $response = array(
             'binId' => $binId,
             'level' => $level,
-            'location' => $location
+            'location' => $location,
+            'lat' => $lat,
+            'lon' => $lon
         );
 
         // Send the response to the frontend as JSON
